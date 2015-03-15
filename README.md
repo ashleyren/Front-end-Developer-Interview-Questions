@@ -121,7 +121,7 @@ This file contains a number of front-end interview questions that can be used wh
 
 * What are the different ways to visually hide content (and make it available only for screen readers)?
 
-  1.
+  1. 
   ```javascript
   visibility: hidden; and/or display:none;
   ```
