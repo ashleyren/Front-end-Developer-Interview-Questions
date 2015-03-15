@@ -162,7 +162,12 @@ var foo = 10 + '20';
 add(2, 5); // 7
 add(2)(5); // 7
 ```
+Answer:
 ```javascript
+//add(2,5)
+function add(a,b){
+  return a+b;
+}
 //add(2)(5)
 function add(a){
   return function(b){
