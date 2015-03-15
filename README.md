@@ -69,13 +69,54 @@ This file contains a number of front-end interview questions that can be used wh
   choose：如果是迅速的prototyping或者是testing，非html5的一个page，使用reset。否则使用normalize。
   
 * Describe Floats and how they work.
+
+  float:left/right/none/inherit
+  float的元素不给它container加高度。
+  如果不给clear float的话，container的height总是不会增加的。
+  overflow：hidden；也可以用来清除浮动，这属性要用在container上面。
+  clear: both要更加好一些。
+  最开始float是用来flow the text around img，当给一个inline或者是block的元素加上float属性的时候，float会使得它像一个inline-block.
+
 * Describe z-index and how stacking context is formed.
+
+  z-index 仅在节点的 position 是 relative|absolute|fixed 才会起作用。
+  z-index是用来控制vertical stacking order of elements that overlap. 
+  比较好的用法就是 100，200，300 这样在他们之间也可以插入元素。
+
 * What are the various clearing techniques and which is appropriate for what context?
+
+  1.```javascript
+  empty div <div style=”clear:both”></div>
+  ```
+  2.overflow method
+  3.使用:after伪元素！
+  ```javascript
+  .clearfix:after {
+    content: “.”;
+    visibility:hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  ```
+
 * Explain CSS sprites, and how you would implement them on a page or site.
+
+  css sprites 是用来减少http request的一个方法，对img resource的一个优化提高加载速度。
+  方法是把各种image合并成为一个大的 按照x，y coordinates来使用。
+  css-background-image 在定位的时候切换显示不同的小区块。
+
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
+
+  css hacks, browser specific hacks.当然有时候呢一个近似准确的也可以达到。
+
 * How do you serve your pages for feature-constrained browsers?
   * What techniques/processes do you use?
+
+  progressive enhancement，graceful degradation.
+  去caniuse.com看这个功能在哪些浏览器里面是支持的，有些浏览器要加vendor prefix 。
+
 * What are the different ways to visually hide content (and make it available only for screen readers)?
 * Have you ever used a grid system, and if so, what do you prefer?
 * Have you used or implemented media queries or mobile specific layouts/CSS?
