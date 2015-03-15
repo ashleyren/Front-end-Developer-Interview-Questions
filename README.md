@@ -162,6 +162,14 @@ var foo = 10 + '20';
 add(2, 5); // 7
 add(2)(5); // 7
 ```
+```javascript
+//add(2)(5)
+function add(a){
+  return function(b){
+    return a+b;
+  }
+} 
+```
 
 *Question: What value is returned from the following statement?*
 ```javascript
