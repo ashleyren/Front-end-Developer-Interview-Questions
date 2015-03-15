@@ -120,14 +120,16 @@ This file contains a number of front-end interview questions that can be used wh
   有些浏览器要加vendor prefix
 
 * What are the different ways to visually hide content (and make it available only for screen readers)?
+
   1.
   ```javascript
   visibility: hidden; and/or display:none;
   ```
   这货一出，所有人都看不到了，所以不能使用
 
-  2.`text-indent： -10000px；`这以使用，但是当元素是要跳转或者navigation的时候会有些bug 不好用。。
-  3.css clip 普通观众 这个1px装不下所以就隐藏了，但是screen reader能够获取到。
+  2. `text-indent： -10000px；`这以使用，但是当元素是要跳转或者navigation的时候会有些bug 不好用
+
+  3. css clip 普通观众 这个1px装不下所以就隐藏了，但是screen reader能够获取到。
   ```javascript
   position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
