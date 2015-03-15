@@ -61,7 +61,7 @@ This file contains a number of front-end interview questions that can be used wh
 #### CSS Questions:
 
 * What is the difference between classes and ID's in CSS?
-`id 用#, class用. id是unique的class可以用在多个元素上面.`
+\n`id 用#, class用. id是unique的class可以用在多个元素上面.`
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 * Describe Floats and how they work.
 * Describe z-index and how stacking context is formed.
