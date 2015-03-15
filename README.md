@@ -66,7 +66,12 @@ This file contains a number of front-end interview questions that can be used wh
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 
   ```javascript
-  每个浏览器有它自己的默认user agent style（比如link是蓝色的还带个下划线，table有一定的border和padding)。reset.css强制抹去所有的浏览器的默认style，以此来避免出现跨浏览器的错误。nomalize.css更加注重的是一个consistent，保留了一部分默认的东西，而不是一刀切。并且它还另外修改了一些浏览器的bug（html5里面的display setting）。normalize不会对调试工具起作用，更加模块化，normalize有documentation。最好的例子就是h1-h tag了，在normalize里面就是粗体。
+  每个浏览器有它自己的默认user agent style（比如link是蓝色的还带个下划线，table有一定的border和padding)。
+  reset.css强制抹去所有的浏览器的默认style，以此来避免出现跨浏览器的错误。
+  nomalize.css更加注重的是一个consistent，保留了一部分默认的东西，而不是一刀切。
+  并且它还另外修改了一些浏览器的bug（html5里面的display setting）。
+  normalize不会对调试工具起作用，更加模块化，normalize有documentation。
+  最好的例子就是h1-h tag了，在normalize里面就是粗体。
   choose：如果是迅速的prototyping或者是testing，非html5的一个page，使用reset。否则使用normalize。
   ```
 * Describe Floats and how they work.
